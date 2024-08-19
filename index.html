@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+
+    <!--FONTS--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--ICONS-->
+
+<!--
+        <link href="bootstrap-5.0.2-dist\css\bootstrap.min.css" rel="stylesheet">
+-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="bootstrap-icons-1.11.0\bootstrap-icons.css" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/655cfe839c.js" crossorigin="anonymous" defer></script>
+
+
+</head>
+
+
+
+<style>
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Montserrat' sans-serif;
+    }
+
+    .class_body{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+
+    }
+
+
+    header {
+        background-color: #222;
+        padding: 25px;
+    }
+
+
+    header h1 {
+        font-size: 2.8em;
+        font-weight: 200;
+        cursor: pointer;
+        color: #00e0ff;
+        transition: 0.2s ease-in-out;
+    }
+
+    header i {
+        font-size: 1.8em;
+        color: #00e0ff;
+        transition: 0.2s ease-in-out;
+    }
+
+    header h1:hover, i:hover {
+        color: #fff;
+    }
+
+    .class_sobre{
+        font-size: 3.2em;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+
+    .class_tec{
+        font-size: 3.2em;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+
+    .class_card{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        background-color: #eee;
+        border-radius: 8px;
+        margin-right: 0.9em;
+        margin-left: 0.9em;
+        cursor: pointer;
+        transition: box-shadow 0.25s ease-in-out;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .class_card:hover{
+        box-shadow: 0px 0px 6px #00e0ff;
+    }
+
+    .class_img_foto{
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;  
+
+        cursor: pointer;
+        border: 1px #00e0ff solid;
+        transition: 0.2s ease-in-out;
+    }
+
+    .class_img_credencial{
+        width: 850px;
+        height: 750px;
+    }
+
+
+    .class_footer {
+        position: fixed;
+        bottom:0;
+        left:0;
+        background-color: #222;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .font {
+        font-style: italic, arial;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 400;
+    }
+  
+    
+    .class_item_01{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .class_item_02{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .class_item_03{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+    .class_item_04{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+    .class_item_05{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .class_item_06{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .class_item_07{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .class_item_08{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .class_item_09{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .class_tamanho_botao{
+        width: 170px;
+    }
+
+
+    .class_card_slide{
+        background-color: #333;
+        box-shadow: 10px 10px 10px 5px white;
+    }
+
+    .class_i{
+        margin-right: 10px;
+    }
+
+    .class_p_slide{
+        padding: 40px;
+    }
+
+    .class_text_justify {
+        text-align: justify;
+    }
+
+    .cor_h5_01{
+        color: rgb(53, 173, 167);
+    }
+    .cor_botao{
+        background-color: #00f7ffbd;
+        color: white;
+    }
+
+    .cor_botao_certificacao{
+        background-color: green;
+        color: white;
+    }
+
+
+</style>
+
+
+<body class="class_body">
+
+    <header>
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="font">Analista De T.I DOUGLAS</h1>
+                    </div>
+                    <div class="col">
+                        <ul class="nav justify-content-center gap-2">
+                            <li class="nav-item">
+                                <a href="https://github.com/DouglasWSVTI" target="_blank" class="nav-link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.linkedin.com/in/douglas-william-da-silva-742938151/" target="_blank"  class="nav-link">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    
+                                    
+                                </a>
+                                <li class="nav-item">
+                                    <a href="https://www.instagram.com/douglas.william19/" target="_blank"  class="nav-link">
+                                        <i class="fa-brands fa-instagram"></i>
+                                        
+                                    </a>
+                                </li>
+                            </a>
+                            <li class="nav-item">
+                                <a href="https://www.credly.com/users/douglas-william-silva" target="_blank"  class="nav-link">
+                                    <i class="fa-solid fa-link"></i>
+                                    
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.youtube.com/@ensinatudo3024" target="_blank"  class="nav-link">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container-fluid mt-2">
+        <ul class="nav justify-content-start gap-2 mb-4">
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_01"><i id="id_icon_01" class="bi-chevron-down class_i"></i>PROJETO 1</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_02"><i id="id_icon_02" class="bi-chevron-down class_i"></i>PROJETO 2</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_03"><i id="id_icon_03" class="bi-chevron-down class_i"></i>PROJETO 3</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_04"><i id="id_icon_04" class="bi-chevron-down class_i"></i>PROJETO 4</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_05"><i id="id_icon_05" class="bi-chevron-down class_i"></i>PROJETO 5</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_06"><i id="id_icon_06" class="bi-chevron-down class_i"></i>PROJETO 6</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_07"><i id="id_icon_07" class="bi-chevron-down class_i"></i>PROJETO 7</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao class_tamanho_botao" id="id_botao_08"><i id="id_icon_08" class="bi-chevron-down class_i"></i>PROJETO 8</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao_certificacao class_tamanho_botao" id="id_botao_09"><i id="id_icon_09" class="bi-chevron-down class_i"></i>CERTIFICAÇÕES</button>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="class_item_01" id="id_descr_01">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">ZABBIX</h4>
+                    <div class="text-white class_text_justify">
+                        Implantação de um software de monitoramento open source utilizando a ferramenta Zabbix, com o objetivo de monitorar ativos de Tecnologia da Informação 
+                        (T.I.) e garantir a disponibilidade e o desempenho dos sistemas e serviços essenciais da empresa. Este projeto inclui a configuração do Zabbix para 
+                        enviar alertas através do Telegram e e-mail quando os ativos de T.I. estiverem indisponíveis ou precisarem de manutenção. O processo de implantação 
+                        pode ser dividido nas seguintes etapas: Instalação do Zabbix,Configuração do Zabbix,Configuração do Zabbix Server e o Zabbix Agent conforme necessário 
+                        para monitorar os ativos de T.I. da empresa. Isso inclui a definição de hosts, itens, triggers e gráficos para monitorar métricas como uso de CPU, 
+                        memória, espaço em disco, disponibilidade de serviços, entre outros. Integração com o Telegram: Configuração do Telegram para enviar alertas de 
+                        monitoramento através desse aplicativo de mensagens. Para isso, foi necessário criar um bot no Telegram e obter o token de acesso, que será utilizado 
+                        pelo Zabbix para enviar mensagens. Configuração da ação de alerta no Zabbix para enviar mensagens para o bot do Telegram quando ocorrerem eventos de 
+                        alerta. Configuração do E-mail: Configurei o Zabbix para enviar alertas por e-mail quando ocorrerem eventos de alerta. Isso envolve a configuração do 
+                        servidor de e-mail no Zabbix e a definição de endereços de e-mail para receber os alertas.Teste e Monitoramento Contínuo para garantir que os alertas 
+                        estejam sendo enviados corretamente pelo Telegram e e-mail. Monitoramento continuamente do sistema para detectar e resolver quaisquer problemas de 
+                        monitoramento ou comunicação. Documentação e Treinamento: Documente todo o processo de implantação, incluindo configurações, integrações e procedimentos
+                        de manutenção. Forneça treinamento para a equipe responsável pelo monitoramento de T.I. para garantir que possam operar efetivamente o sistema de
+                        monitoramento. Ajustes e Otimizações, ajustes e otimizações conforme necessário para melhorar o desempenho e a eficácia do sistema de monitoramento. 
+                        Adição de novos itens de monitoramento, ajustes de limiares de alerta e otimizações de desempenho do Zabbix.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="class_item_02" id="id_descr_02">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">GRAFANA</h4>
+                    <div class="text-white class_text_justify">
+                        
+                        Implantação de um software de Dashboard utilizando o Grafana, com o objetivo de exibir alertas em gráficos na TV para indicar os ativos
+                        de Tecnologia da Informação (T.I.) indisponíveis ou que precisam de manutenção. Este projeto envolve a configuração do Grafana para criar
+                        visualizações dinâmicas e informativas, permitindo que a equipe de T.I. monitore facilmente o status e o desempenho dos sistemas e serviços 
+                        da empresa.Durante a implantação do Grafana, configuramos a integração com fontes de dados relevantes, como bancos de dados, sistemas de 
+                        monitoramento por exemplo, (Zabbix, MySQL) e APIs externas, para coletar dados e métricas em tempo real. Isso nos permite criar visualizações
+                        detalhadas e informativas dos dados de T.I., garantindo que tenhamos insights precisos sobre o estado do nosso ambiente.Criei painéis
+                        personalizados no Grafana, utilizando uma variedade de gráficos, tabelas e widgets para representar as métricas de forma clara e concisa. 
+                        Com recursos avançados de personalização, pudemos adaptar os painéis para atender às necessidades específicas da nossa equipe de T.I.
+                        e destacar métricas críticas de maneira proeminente.Além disso, configuramos alertas no Grafana para serem acionados quando ocorrem eventos
+                        importantes ou anomalias no ambiente de T.I. Definimos limiares e condições específicas para cada alerta, garantindo que sejamos notificados
+                        imediatamente em caso de problemas ou degradação do serviço.
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="class_item_03" id="id_descr_03">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">GLPI</h4>
+                    <div class="text-white class_text_justify">
+                        Implantação de um sistema de chamados GLPI open source para facilitar e organizar o processo de abertura de chamados pelos colaboradores da empresa. O GLPI
+                        é uma ferramenta versátil e poderosa que permite o gerenciamento eficiente de ativos de TI, help desk e outros processos relacionados.Durante a 
+                        implantação do GLPI, configuramos e personalizamos a plataforma de acordo com as necessidades específicas da empresa. Isso incluiu a definição de 
+                        categorias de chamados, tipos de solicitação, prioridades, SLAs e outros parâmetros relevantes para o ambiente de TI da 
+                        organização.Além disso, personalizamos os formulários de chamados e os fluxos de trabalho para atender às políticas e procedimentos internos da empresa. 
+                        Isso garante consistência e conformidade com os processos estabelecidos, facilitando a gestão e acompanhamento dos chamados ao longo do tempo.
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="class_item_04" id="id_descr_04">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">WSUS</h4>
+                    <div class="text-white class_text_justify">
+                        Implantação do WSUS pois é uma ferramenta essencial para a administração eficaz das atualizações de segurança e patches de software em ambientes 
+                        corporativos baseados em Windows. Este projeto teve como objetivo implementar e configurar o WSUS em nossa infraestrutura de rede, garantindo que 
+                        todos os sistemas recebessem atualizações críticas e importantes de forma centralizada e controlada.Durante a implantação do WSUS Realizamos a Avaliação
+                        das necessidades e requisitos da organização em termos de atualizações de segurança e patches de software.Identificação dos sistemas e servidores que
+                        serão integrados ao WSUS.Definição da estratégia de implantação, incluindo a arquitetura de servidor e a distribuição de grupos de computadores. Após 
+                        a Avaliação, Realizamos as configurações das políticas de grupo (GPOs) para direcionar os clientes Windows para o servidor WSUS e Testes de conectividade
+                        e comunicação entre os clientes e o servidor WSUS.
+                    </div>     
+                </div>
+            </div>
+        </div>  
+        <div class="class_item_05" id="id_descr_05">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">SERVIDOR DE ARQUIVOS</h4>
+                    <div class="text-white class_text_justify">
+                        Implantação de melhoria em uma empresa privada, icluindo a necessidade de padronização das configurações dos computadores dos usuários e a simplificação
+                        do acesso a recursos de rede compartilhados e a implementação de medidas de segurança adicionais para proteger nossos dados críticos. Com base nesses 
+                        objetivos, desenvolvemos uma estratégia abrangente de implantação de GPOs, que incluiu as seguintes etapas. Desenvolvemos uma série de GPOs personalizadas
+                        para padronizar as configurações dos computadores dos usuários, mapear unidades de rede (PASTAS DE ARQUIVOS), configurar políticas de segurança, Antes de 
+                        implementar para todos os usuarios da empresa, Realizamos testes extensivos para garantir que as GPOs funcionassem conforme o esperado e não causassem 
+                        interrupções no ambiente de produção.Com base nos resultados dos testes, implementamos as GPOs em toda a empresa, garantindo uma transição suave e sem complicações.
+                        Fornecemos treinamento e suporte adequados aos usuários para garantir que eles estivessem familiarizados com as novas configurações mudanças. 
+                    </div>     
+                </div>
+            </div>
+        </div>
+
+        <div class="class_item_06" id="id_descr_06">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">RESTRUTURAÇÃO DE COMPUTADORES</h4>
+                    <div class="text-white class_text_justify">
+                        Implantação de melhoria em uma empresa privada, realziando uma reestruturação completa dos equipamentos computacionais em substituir os desktops montados
+                        por máquinas empresariais do tipo workstation. Essa mudança trouxe inúmeros benefícios,principamente nos departametos que exigem que os computadores sejam
+                        mais robustos, incluindo maior desempenho, confiabilidade e eficiência para as operações diárias.Este projeto destaca nossa capacidade de gerenciar e 
+                        executar mudanças tecnológicas complexas, garantindo uma transição suave e eficiente para novos sistemas que suportam o crescimento e a inovação 
+                        contínuos da empresa.
+                    
+                    </div>     
+                </div>
+            </div>
+        </div>
+
+        <div class="class_item_07" id="id_descr_07">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">REPLICA DE BACKUP</h4>
+                    <div class="text-white class_text_justify">
+                        implantação de uma solução de backup utilizando dispositivos QNAP e um array de RAID 5 para garantir a segurança e a integridade dos dados da empresa. 
+                        A solução foi projetada para automatizar o processo de backup, aumentar a redundância e proteger contra perda de dados. Nosso objetivo era garantir a 
+                        segurança dos dados, automatizar processo de backup e aumentar a redundância dos dados armazenando em repositórios separados.Com a finalização do projeto,
+                        nos proporcionou uma proteção robusta para os dados da empresa.A automatização dos backups reduziu significativamente o risco de perda de dados e
+                        minimizou o impacto de possíveis falhas humanas.A redundância dos dados em repositórios separados aumentou a segurança e a disponibilidade das informações.
+                    
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="class_item_08" id="id_descr_08">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">LABORATORIO DE ESTUDOS</h4>
+                    <div class="text-white class_text_justify">
+                        Este projeto envolveu a criação de um laboratório de estudos com o objetivo de fornecer um ambiente prático para aprender e experimentar tecnologias
+                        de rede e servidores e uma simulação de . O laboratório inclui a implementação do Active Directory no Windows Server 2016, um servidor de arquivos no sistema operacional 
+                        Debian e um firewall pfSense.
+                    
+                    </div>     
+                </div>
+            </div>
+        </div>
+
+        <div class="class_item_09" id="id_descr_09">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">CERTIFICAÇÃO</h4>
+                    <div class="text-white class_text_justify">
+                        <img  class="class_img_credencial mt-3" src="Credencial - douglaswilliam-2030 _ Microsoft Learn_page-0001.jpg" alt="Credencial">
+                    </div>     
+                </div>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-10 col-xl-6">
+                <div class="card-body">
+                    <p class="text-white class_sobre mt-1">Sobre mim</p>
+                    <div class="text-white class_text_justify">
+                        Sou Analista de T.I, com mais de 5 anos de experiência focado em infraestrutura,
+                        Ao longo da minha trajetória Adquiri um amplo conhecimento e habilidades especializadas na gestão e 
+                        operação de ambientes de Infraestrutura de T.I. Tenho uma Sólida compreensão dos 
+                        princípios fundamentais de redes, servidores, armazenamento de dados, 
+                        virtualização e segurança da informação.Além disso, Desenvolvi Habilidades 
+                        em liderança de equipe, resolução de problemas complexos, comunicação eficaz e 
+                        adaptação a novas tecnologias e ambientes em constante evolução. 
+                        Estou comprometido em buscar continuamente o aprimoramento profissional e 
+                        contribuir para o sucesso e a segurança das operações de T.I da organização.
+                        Minha capacidade de liderar equipes, resolver problemas complexos e adaptar-me a novas tecnologias me permite
+                        entregar soluções eficazes e inovadoras para os desafios da infraestrutura de T.I.Gosto de compartilhar conhecimento e deixei meus projetos e minha 
+                        certificação acima.
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+                <div class="card-body">
+                    <p class="text-white class_tec">👨‍💻 Principais Tecnologias</p>
+                    <ul class="nav justify-content-left gap-2">
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img class="class_img" src="./img/techs/LN.jpeg" alt="Logo do LINUX">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/download.png" alt="Logo do WINDOWS SERVER">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/azure.png" alt="Logo do AZURE">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/ZABBIX.png" alt="Logo do ZABBIX">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/Grafana.png" alt="Logo do GRAFANA">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/kaspersky.png" alt="Logo do KASPERSKY">
+                            </div>    
+                            <li class="nav-item">
+                                <div class="card class_card">
+                                    <img  class="class_img" src="./img/techs/VEEAM.jpg" alt="Logo do VEEAM">
+                                </div>    
+                            </li>
+                            <li class="nav-item">
+                                <div class="card class_card">
+                                    <img  class="class_img" src="./img/techs/microsoft.png" alt="Logo do QNAP">
+                                </div>    
+                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/CHB.png" alt="Logo do CHB">
+                            </div>    
+                            <li class="nav-item">
+                                <div class="card class_card">
+                                    <img  class="class_img" src="./img/techS/GLPI.png" alt="Logo do QNAP">
+                                </div>    
+                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/fortinet.jpg" alt="Logo do FORTINET">
+                            </div>    
+
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/sonicwall.jpg" alt="Logo do SONICWALL">
+                            </div>    
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/PFSENSE.png" alt="Logo do PFSENSE">
+                            </div>    
+                            <li class="nav-item">
+                                <div class="card class_card">
+                                    <img  class="class_img" src="./img/techs/mikrotik.jpg" alt="Logo do QNAP">
+                                </div>    
+                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/vmware.jpg" alt="Logo do VMWARE">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/VSPHERE.jpg" alt="Logo do VSPHERE">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/qnap.jpg" alt="Logo do QNAP">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/CFTV.jpeg" alt="Logo do CFTV">
+                            </div>    
+                        </li>
+                    
+                       
+                        
+
+                    </ul> 
+
+                </div>
+            </div>    
+            <div class="col-12 col-sm-12 col-md-6 text-center">
+                <ul class="nav justify-content-center">
+                    <li>
+                        <figure>
+                            <img class="class_img_foto mt-2"  src="./img/techs/- [ ] douglas.william19-auemtada.-high compression-4x.jpg" alt="Imagem de Douglas Silva">
+                            <figcaption class="text-white mt-3" >Douglas William Da Silva</figcaption>
+                        </figure>
+                    </li>     
+                </ul>    
+            </div>    
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <footer class="class_footer">
+            <span class="text-white">
+                &copy; Douglas William Da Silva, 2024 - Todos os direitos reservados.
+            </span>
+        </footer>
+    </div>    
+
+
+<!--
+    <script src="bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script  type="text/javascript" defer>
+
+
+    document.getElementById('id_botao_01').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_01    =   document.getElementById('id_icon_01').className;
+        if  (wicon_01 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_01').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        }
+        wbotao_01   =   document.getElementById('id_descr_01');
+
+        if  (wbotao_01.style.display == 'block'){
+            document.getElementById('id_descr_01').style.display = "none";
+        }else{
+            document.getElementById('id_descr_01').style.display = "block";
+        }
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+
+    }
+
+
+    document.getElementById('id_botao_02').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_02    =   document.getElementById('id_icon_02').className;
+        if  (wicon_02 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_02').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        }
+        wbotao_02   =   document.getElementById('id_descr_02');
+        if  (wbotao_02.style.display == 'block'){
+            document.getElementById('id_descr_02').style.display = "none";
+        }else{
+            document.getElementById('id_descr_02').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+    }
+
+    document.getElementById('id_botao_03').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_03    =   document.getElementById('id_icon_03').className;
+        if  (wicon_03 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_03').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        }
+        wbotao_03   =   document.getElementById('id_descr_03');
+        if  (wbotao_03.style.display == 'block'){
+            document.getElementById('id_descr_03').style.display = "none";
+        }else{
+            document.getElementById('id_descr_03').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+
+
+    }
+    document.getElementById('id_botao_04').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_04    =   document.getElementById('id_icon_04').className;
+        if  (wicon_04 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_04').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        }
+        wbotao_04   =   document.getElementById('id_descr_04');
+        if  (wbotao_04.style.display == 'block'){
+            document.getElementById('id_descr_04').style.display = "none";
+        }else{
+            document.getElementById('id_descr_04').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+
+    }
+    document.getElementById('id_botao_05').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_05    =   document.getElementById('id_icon_05').className;
+        if  (wicon_05 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_05').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        }
+        wbotao_05   =   document.getElementById('id_descr_05');
+        if  (wbotao_05.style.display == 'block'){
+            document.getElementById('id_descr_05').style.display = "none";
+        }else{
+            document.getElementById('id_descr_05').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+    }
+    document.getElementById('id_botao_06').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_06    =   document.getElementById('id_icon_06').className;
+        if  (wicon_06 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_06').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        }
+        wbotao_06   =   document.getElementById('id_descr_06');
+        if  (wbotao_06.style.display == 'block'){
+            document.getElementById('id_descr_06').style.display = "none";
+        }else{
+            document.getElementById('id_descr_06').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+    }
+    document.getElementById('id_botao_07').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_07    =   document.getElementById('id_icon_07').className;
+        if  (wicon_07 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_07').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        }
+        wbotao_07   =   document.getElementById('id_descr_07');
+        if  (wbotao_07.style.display == 'block'){
+            document.getElementById('id_descr_07').style.display = "none";
+        }else{
+            document.getElementById('id_descr_07').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+    }
+
+    document.getElementById('id_botao_08').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_08    =   document.getElementById('id_icon_08').className;
+        if  (wicon_08 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_08').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        }
+        wbotao_08   =   document.getElementById('id_descr_08');
+        if  (wbotao_08.style.display == 'block'){
+            document.getElementById('id_descr_08').style.display = "none";
+        }else{
+            document.getElementById('id_descr_08').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+    }
+   
+
+    document.getElementById('id_botao_09').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_09    =   document.getElementById('id_icon_09').className;
+        if  (wicon_09 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_09').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        }
+        wbotao_09   =   document.getElementById('id_descr_09');
+        if  (wbotao_09.style.display == 'block'){
+            document.getElementById('id_descr_09').style.display = "none";
+        }else{
+            document.getElementById('id_descr_09').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+    }
+
+
+</script>
+
+
+</body>
+</html>
