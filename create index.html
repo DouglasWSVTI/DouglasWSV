@@ -38,7 +38,7 @@
     }
 
     .class_body{
-        min-height: 100vh;
+        min-height: 100vh;  
         display: flex;
         flex-direction: column;
         background-color: #333;
@@ -112,7 +112,7 @@
     }
 
     .class_img_credencial{
-        width: 850px;
+        width: 800px;
         height: 750px;
     }
 
@@ -122,7 +122,7 @@
         bottom:0;
         left:0;
         background-color: #222;
-        width: 100%;
+        width: 100%;  
         height: 50px;
         display: flex;
         justify-content: center;
@@ -197,8 +197,16 @@
         z-index: 9999;
     }
 
+    .class_item_10{
+        max-width: 800px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+    }
+
+
     .class_tamanho_botao{
-        width: 170px;
+        width: 180px;
     }
 
 
@@ -274,9 +282,7 @@
                             <li class="nav-item">
                                 <a href="https://www.youtube.com/@ensinatudo3024" target="_blank"  class="nav-link">
                                     <i class="fa-brands fa-youtube"></i>
-                                    
                                 </a>
-                            </li>
                             </li>
                         </ul>
                     </div>       
@@ -314,7 +320,10 @@
                 <button class="btn cor_botao class_tamanho_botao" id="id_botao_08"><i id="id_icon_08" class="bi-chevron-down class_i"></i>PROJETO 8</button>
             </li>
             <li class="nav-item">
-                <button class="btn cor_botao_certificacao class_tamanho_botao" id="id_botao_09"><i id="id_icon_09" class="bi-chevron-down class_i"></i>CERTIFICAÇÕES</button>
+                <button class="btn cor_botao_certificacao class_tamanho_botao" id="id_botao_09"><i id="id_icon_09" class="bi-chevron-down class_i"></i>CERTIFICAÇÕES I</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn cor_botao_certificacao class_tamanho_botao" id="id_botao_10"><i id="id_icon_10" class="bi-chevron-down class_i"></i>CERTIFICAÇÕES II</button>
             </li>
         </ul>
     </div>
@@ -470,8 +479,16 @@
             </div>
         </div>
 
-
-        
+        <div class="class_item_10" id="id_descr_10">
+            <div class="card border-white border-2 class_card_slide">
+                <div class="card-body">
+                    <h4 class="card-title text-decoration-underline cor_h5_01">CERTIFICAÇÃO</h4>
+                    <div class="text-white class_text_justify">
+                        <img  class="class_img_credencial mt-3" src="certificate_page-0001.jpg" alt="certificate">
+                    </div>     
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -486,18 +503,18 @@
                 <div class="card-body">
                     <p class="text-white class_sobre mt-1">Sobre mim</p>
                     <div class="text-white class_text_justify">
-                        Sou Analista de T.I, com mais de 5 anos de experiência focado em infraestrutura,
-                        Ao longo da minha trajetória Adquiri um amplo conhecimento e habilidades especializadas na gestão e 
-                        operação de ambientes de Infraestrutura de T.I. Tenho uma Sólida compreensão dos 
-                        princípios fundamentais de redes, servidores, armazenamento de dados, 
-                        virtualização e segurança da informação.Além disso, Desenvolvi Habilidades 
-                        em liderança de equipe, resolução de problemas complexos, comunicação eficaz e 
-                        adaptação a novas tecnologias e ambientes em constante evolução. 
-                        Estou comprometido em buscar continuamente o aprimoramento profissional e 
-                        contribuir para o sucesso e a segurança das operações de T.I da organização.
-                        Minha capacidade de liderar equipes, resolver problemas complexos e adaptar-me a novas tecnologias me permite
-                        entregar soluções eficazes e inovadoras para os desafios da infraestrutura de T.I.Gosto de compartilhar conhecimento e deixei meus projetos e minha 
-                        certificação acima.
+                        Com mais de 5 anos de experiência, Atuando como analista de Infraestrutura de T.I com foco em observabilidade, 
+                        desempenho e automação De Scripts, tenho o privilégio de liderar o ambiente Zabbix da nossa equipe. Nesta função,
+                        fui responsável por projetar, implementar e manter um ambiente altamente resiliente e eficiente. Além disso, 
+                        possuo ampla experiência na administração de servidores Linux e Windows, com foco em garantir a alta disponibilidade e 
+                        o desempenho ideal dos sistemas críticos. Minha expertise abrange desde a configuração inicial até a otimização contínua, 
+                        com ênfase em segurança e eficiência operacional. Atualmente, estou aprofundando meus conhecimentos em computação em nuvem,
+                        explorando tecnologias como infraestrutura como serviço (IaaS) e automação de ambientes em cloud, para integrar soluções modernas
+                        ao nosso ambiente de TI. Minha abordagem é orientada pela pro atividade e pelo monitoramento avançado, utilizando o Zabbix como uma 
+                        ferramenta central para garantir visibilidade total sobre o ambiente. A automação de scripts é uma peça fundamental do meu trabalho, 
+                        permitindo não só a resolução ágil de problemas, mas também a otimização de processos, aumentando a eficiência operacional e a resiliência do sistema. 
+                        Minha missão é promover uma infraestrutura robusta, que não só atenda, mas antecipe as necessidades da equipe e do negócio. Além disso, Desenvolvi habilidades em liderança de equipe, 
+                        resolução de problemas complexos, comunicação eficaz e adaptação a novas tecnologias e ambientes em constante evolução.
                     </div>
                 </div>
             </div> 
@@ -506,7 +523,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="card-body">
                     <p class="text-white class_tec">👨‍💻 Principais Tecnologias</p>
                     <ul class="nav justify-content-left gap-2">
@@ -539,32 +556,31 @@
                             <div class="card class_card">
                                 <img  class="class_img" src="./img/techs/kaspersky.png" alt="Logo do KASPERSKY">
                             </div>    
-                            <li class="nav-item">
-                                <div class="card class_card">
-                                    <img  class="class_img" src="./img/techs/VEEAM.jpg" alt="Logo do VEEAM">
-                                </div>    
-                            </li>
-                            <li class="nav-item">
-                                <div class="card class_card">
-                                    <img  class="class_img" src="./img/techs/microsoft.png" alt="Logo do QNAP">
-                                </div>    
-                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/VEEAM.jpg" alt="Logo do VEEAM">
+                            </div>    
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/microsoft.png" alt="Logo do QNAP">
+                            </div>    
                         </li>
                         <li class="nav-item">
                             <div class="card class_card">
                                 <img  class="class_img" src="./img/techs/CHB.png" alt="Logo do CHB">
                             </div>    
-                            <li class="nav-item">
-                                <div class="card class_card">
-                                    <img  class="class_img" src="./img/techS/GLPI.png" alt="Logo do QNAP">
-                                </div>    
-                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/GLPI.png" alt="Logo do GLPI">
+                            </div>    
                         </li>
                         <li class="nav-item">
                             <div class="card class_card">
                                 <img  class="class_img" src="./img/techs/fortinet.jpg" alt="Logo do FORTINET">
                             </div>    
-
                         </li>
 
                         <li class="nav-item">
@@ -577,11 +593,11 @@
                             <div class="card class_card">
                                 <img  class="class_img" src="./img/techs/PFSENSE.png" alt="Logo do PFSENSE">
                             </div>    
-                            <li class="nav-item">
-                                <div class="card class_card">
-                                    <img  class="class_img" src="./img/techs/mikrotik.jpg" alt="Logo do QNAP">
-                                </div>    
-                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <div class="card class_card">
+                                <img  class="class_img" src="./img/techs/mikrotik.jpg" alt="Logo do QNAP">
+                            </div>    
                         </li>
                         <li class="nav-item">
                             <div class="card class_card">
@@ -603,15 +619,11 @@
                                 <img  class="class_img" src="./img/techs/CFTV.jpeg" alt="Logo do CFTV">
                             </div>    
                         </li>
-                    
-                       
-                        
-
                     </ul> 
-
                 </div>
-            </div>    
-            <div class="col-12 col-sm-12 col-md-6 text-center">
+            </div>   
+
+            <div class="col-12 col-sm-12 col-md-6  col-lg-6 col-xl-6 col-xxl-6text-center">
                 <ul class="nav justify-content-center">
                     <li>
                         <figure>
@@ -623,6 +635,22 @@
             </div>    
         </div>
     </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="card-body">
+                    <p class="text-black">.</p>
+                    <p class="text-black">.</p>
+                    <p class="text-black">.</p>
+                    <p class="text-black">.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="container-fluid">
         <footer class="class_footer">
@@ -665,6 +693,7 @@
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
 
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
@@ -674,6 +703,7 @@
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
 
     }
 
@@ -700,6 +730,8 @@
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
+
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
@@ -708,6 +740,7 @@
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
     }
 
     document.getElementById('id_botao_03').onclick = function(evt){        
@@ -732,6 +765,7 @@
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
 
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
@@ -741,7 +775,7 @@
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
-
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
 
     }
     document.getElementById('id_botao_04').onclick = function(evt){        
@@ -766,6 +800,8 @@
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
+
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
@@ -774,6 +810,7 @@
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
 
     }
     document.getElementById('id_botao_05').onclick = function(evt){        
@@ -798,6 +835,8 @@
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
+
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
@@ -806,7 +845,9 @@
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
     }
+
     document.getElementById('id_botao_06').onclick = function(evt){        
         evt.preventDefault();
         wicon_06    =   document.getElementById('id_icon_06').className;
@@ -829,6 +870,8 @@
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
+
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
@@ -837,7 +880,9 @@
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
     }
+
     document.getElementById('id_botao_07').onclick = function(evt){        
         evt.preventDefault();
         wicon_07    =   document.getElementById('id_icon_07').className;
@@ -860,6 +905,8 @@
         document.getElementById('id_descr_06').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
+
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
@@ -868,6 +915,7 @@
         document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
     }
 
     document.getElementById('id_botao_08').onclick = function(evt){        
@@ -892,6 +940,8 @@
         document.getElementById('id_descr_06').style.display = "none";
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_09').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
+
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
@@ -900,6 +950,7 @@
         document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
     }
    
 
@@ -925,6 +976,8 @@
         document.getElementById('id_descr_06').style.display = "none";
         document.getElementById('id_descr_07').style.display = "none";
         document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_10').style.display = "none";
+
         document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
@@ -933,7 +986,48 @@
         document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
         document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
     }
+
+
+    
+    document.getElementById('id_botao_10').onclick = function(evt){        
+        evt.preventDefault();
+        wicon_10    =   document.getElementById('id_icon_10').className;
+        if  (wicon_10 == 'bi-chevron-down class_i'){
+            document.getElementById('id_icon_10').className = 'bi-chevron-up class_i'
+        }else{
+            document.getElementById('id_icon_10').className = 'bi-chevron-down class_i'
+        }
+        wbotao_10   =   document.getElementById('id_descr_10');
+        if  (wbotao_10.style.display == 'block'){
+            document.getElementById('id_descr_10').style.display = "none";
+        }else{
+            document.getElementById('id_descr_10').style.display = "block";
+        }
+        document.getElementById('id_descr_01').style.display = "none";
+        document.getElementById('id_descr_02').style.display = "none";
+        document.getElementById('id_descr_03').style.display = "none";
+        document.getElementById('id_descr_04').style.display = "none";
+        document.getElementById('id_descr_05').style.display = "none";
+        document.getElementById('id_descr_06').style.display = "none";
+        document.getElementById('id_descr_07').style.display = "none";
+        document.getElementById('id_descr_08').style.display = "none";
+        document.getElementById('id_descr_09').style.display = "none";
+
+        document.getElementById('id_icon_01').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_02').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_03').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_04').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_05').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_06').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_07').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_08').className = 'bi-chevron-down class_i'
+        document.getElementById('id_icon_09').className = 'bi-chevron-down class_i'
+    }
+
+
+
 
 
 </script>
