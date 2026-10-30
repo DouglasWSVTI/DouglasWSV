@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currículo | Douglas Silva</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #ffffff;
+            background: radial-gradient( circle at top right, rgba(139, 92, 246, 0.18), transparent 35% ), radial-gradient( circle at bottom left, rgba(168, 85, 247, 0.10), transparent 30% ), #171717;
+        }
+
+
+        /* CONTAINER PRINCIPAL */
+
+        .container-curriculo {
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 45px;
+            background: linear-gradient( 145deg, rgba(45, 45, 45, 0.98), rgba(32, 32, 32, 0.98) );
+            border: 1px solid rgba(139, 92, 246, 0.65);
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.20), 0 0 70px rgba(139, 92, 246, 0.08);
+            overflow: hidden;
+        }
+
+
+        /* CABEÇALHO */
+
+        .cabecalho-curriculo {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+            .cabecalho-curriculo h1 {
+                font-size: 3rem;
+                font-weight: 800;
+                letter-spacing: 1px;
+                background: linear-gradient( 90deg, #ffffff, #e9d5ff, #a855f7 );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+                .cabecalho-curriculo h1::after {
+                    content: "";
+                    display: block;
+                    width: 180px;
+                    height: 4px;
+                    margin: 16px auto 0;
+                    border-radius: 20px;
+                    background: linear-gradient( 90deg, #8b5cf6, #a855f7 );
+                    box-shadow: 0 0 15px rgba(139, 92, 246, 0.65);
+                }
+
+            .cabecalho-curriculo p {
+                max-width: 700px;
+                margin: 22px auto 0;
+                color: #c9c9d1;
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+
+
+        /* BOTÕES */
+
+        .acoes-curriculo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .btn-curriculo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 250px;
+            min-height: 55px;
+            padding: 14px 25px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border: 2px solid #8b5cf6;
+            border-radius: 50px;
+            background: linear-gradient( 135deg, rgba(139, 92, 246, 0.25), rgba(139, 92, 246, 0.05) );
+            box-shadow: 0 0 18px rgba(139, 92, 246, 0.22);
+            transition: all 0.3s ease;
+        }
+
+            .btn-curriculo:hover {
+                color: #ffffff;
+                background: linear-gradient( 135deg, #8b5cf6, #a855f7 );
+                transform: translateY(-4px);
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.85), 0 0 40px rgba(139, 92, 246, 0.35);
+            }
+
+
+        /* ÁREA DO CURRÍCULO */
+
+        .visualizacao-curriculo {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(139, 92, 246, 0.30);
+            border-radius: 20px;
+            box-shadow: inset 0 0 25px rgba(139, 92, 246, 0.04);
+        }
+
+            .visualizacao-curriculo a {
+                display: block;
+                text-decoration: none;
+            }
+
+
+        /* IMAGEM */
+
+        .imagem-curriculo {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 2px solid rgba(139, 92, 246, 0.70);
+            border-radius: 14px;
+            cursor: zoom-in;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.20);
+            transition: all 0.35s ease;
+        }
+
+            .imagem-curriculo:hover {
+                transform: scale(1.01);
+                border-color: #c084fc;
+                box-shadow: 0 0 25px rgba(139, 92, 246, 0.60), 0 0 50px rgba(139, 92, 246, 0.18);
+            }
+
+
+        /* TEXTO ABAIXO DO CURRÍCULO */
+
+        .aviso-curriculo {
+            margin-top: 18px;
+            color: #a9a9b3;
+            font-size: 0.88rem;
+            text-align: center;
+        }
+
+
+        /* RESPONSIVO */
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .container-curriculo {
+                padding: 25px 15px;
+            }
+
+            .cabecalho-curriculo h1 {
+                font-size: 2rem;
+            }
+
+            .btn-curriculo {
+                width: 100%;
+            }
+
+            .visualizacao-curriculo {
+                padding: 8px;
+            }
+        }
+
+        .cabecalho-curriculo h1 {
+            color: #ffffff;
+            background: none;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: #ffffff;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(139, 92, 246, 0.45), 0 0 25px rgba(139, 92, 246, 0.25);
+        }
+
+            /* Remove a linha abaixo do título */
+            .cabecalho-curriculo h1::after {
+                display: none;
+            }
+
+        .cabecalho-curriculo h1 {
+            color: #ffffff;
+            background: none;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: #ffffff;
+            text-shadow: 0 0 8px rgba(139, 92, 246, 0.55), 0 0 18px rgba(139, 92, 246, 0.30);
+            font-weight: 800;
+        }
+
+            .cabecalho-curriculo h1::after {
+                display: none;
+            }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main class="container-curriculo">
+
+        <!-- TÍTULO -->
+
+        <header class="cabecalho-curriculo">
+
+            <h1>📄 Meu Currículo</h1>
+
+            <p>
+                Conheça minha experiência profissional, formação,
+                certificações e principais competências em
+                infraestrutura e tecnologia da informação.
+            </p>
+
+        </header>
+
+
+        <!-- BOTÕES -->
+
+        <div class="acoes-curriculo">
+
+            <a href="index.html" class="btn-curriculo">
+                ← VOLTAR AO PORTFÓLIO
+            </a>
+
+            <a href="img/curriculo/curriculo.pdf" target="_blank" class="btn-curriculo">
+                ⬇ BAIXAR CURRÍCULO EM PDF
+            </a>
+
+        </div>
+
+
+        <!-- CURRÍCULO -->
+
+        <section class="visualizacao-curriculo">
+
+
+            
+            <img src="img/curriculo/curriculo.jpg" alt="Currículo de Douglas Silva" class="imagem-curriculo">
+
+            <p class="aviso-curriculo">
+            </p>
+
+        </section>
+
+      
+
+
+    </main>
+
+</body>
+
+</html>

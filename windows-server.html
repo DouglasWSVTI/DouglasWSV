@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migração Windows Server 2025</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background: #1e1e1e;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container-projeto {
+            width: 95%;
+            min-height: 90vh;
+            margin: auto;
+            padding: 50px;
+            background: #2b2b2b;
+            border: 2px solid #8b5cf6;
+            border-radius: 25px;
+            color: white;
+            box-shadow: 0 0 25px rgba(139,92,246,.25);
+        }
+        .container-projeto {
+            background: radial-gradient( circle at top right, rgba(139,92,246,.10), transparent 30% ), #2b2b2b;
+        }
+
+            .container-projeto h1 {
+                font-size: 3.5rem;
+                font-weight: 800;
+                text-shadow: 0 0 15px rgba(139,92,246,.4), 0 0 30px rgba(139,92,246,.2);
+            }
+
+        .subtitulo {
+            max-width: 700px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d6d6d6;
+        }
+
+        .status-projeto {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+            .status-projeto span {
+                padding: 10px 18px;
+                border: 1px solid #8b5cf6;
+                border-radius: 30px;
+                background: rgba(139,92,246,.1);
+            }
+
+        .container-projeto h2 {
+            color: #8b5cf6;
+            margin-top: 40px;
+            border-left: 4px solid #8b5cf6;
+            padding-left: 15px;
+        }
+
+        .container-projeto p,
+        .container-projeto li {
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+
+        .techs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+            .techs span {
+                background: #8b5cf6;
+                padding: 10px 18px;
+                border-radius: 25px;
+                font-size: .9rem;
+                font-weight: 600;
+            }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 14px 25px;
+            border: 2px solid #8b5cf6;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .btn-voltar {
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(139,92,246,.2);
+        }
+
+
+            .btn-voltar:hover {
+                background: #8b5cf6;
+                box-shadow: 0 0 15px rgba(139,92,246,.7);
+                transform: translateY(-2px);
+            }
+
+        .container-projeto h1::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 6px;
+            margin-top: 15px;
+            background: red;
+        }
+
+
+        .secao-projeto {
+            background: rgba(255,255,255,.03);
+            border: 1px solid rgba(139,92,246,.2);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+        .techs span {
+            transition: all .3s ease;
+        }
+            .techs span:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 0 10px rgba(139,92,246,.5);
+            }
+
+        /* Glow suave no container */
+
+        .container-projeto::before {
+            content: "";
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 500px;
+            height: 500px;
+            background: rgba(139, 92, 246, 0.08);
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+        }
+
+        .container-projeto {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .container-projeto h1 {
+                text-shadow: 0 0 15px rgba(139,92,246,.4), 0 0 30px rgba(139,92,246,.2);
+                display: block;
+            }
+
+                .container-projeto h1::after {
+                    content: "";
+                    display: block;
+                    width: 845px;
+                    height: 4px;
+                    margin-top: 15px;
+                    border-radius: 20px;
+                    background: linear-gradient( 90deg, #8b5cf6, #a855f7 );
+                }
+
+            .container-projeto ul li {
+                margin-bottom: 12px;
+                transition: .3s ease;
+            }
+
+                .container-projeto ul li:hover {
+                    color: white;
+                    transform: translateX(5px);
+                }
+
+        .container-projeto {
+            background: radial-gradient( circle at top right, rgba(139,92,246,.08), transparent 35% ), #2b2b2b;
+        }
+
+        .btn-voltar {
+            box-shadow: 0 0 15px rgba(139,92,246,.15);
+        }
+
+            .btn-voltar:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 0 15px #8b5cf6, 0 0 30px rgba(139,92,246,.5);
+            }
+
+        .galeria-projeto {
+            position: absolute;
+            right: 80px;
+            top: 180px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+            .galeria-projeto a {
+                text-decoration: none;
+            }
+
+            .galeria-projeto img {
+                width: 220px;
+                height: 140px;
+                object-fit: cover;
+                border-radius: 15px;
+                border: 2px solid #8b5cf6;
+                transition: all .3s ease;
+                box-shadow: 0 0 15px rgba(139,92,246,.3);
+                cursor: zoom-in;
+                transition: all .4s ease;
+            }
+
+                .galeria-projeto img:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 25px rgba(139,92,246,.7);
+                    border-color: #a855f7;
+                }
+
+        .status-projeto span {
+            transition: all .3s ease;
+        }
+
+            .status-projeto span:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 0 15px rgba(139,92,246,.5);
+                background: rgba(139,92,246,.15);
+            }
+
+        .galeria-projeto {
+            padding: 15px;
+            border: 1px solid rgba(139,92,246,.2);
+            border-radius: 20px;
+            background: rgba(255,255,255,.02);
+            backdrop-filter: blur(5px);
+        }
+
+        .container-projeto {
+            box-shadow: 0 0 25px rgba(139,92,246,.25), 0 0 60px rgba(139,92,246,.08), inset 0 0 1px rgba(255,255,255,.2);
+        }
+
+        .titulo-galeria {
+            position: absolute;
+            right: 230px;
+            top: 100px;
+            color: #8b5cf6;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(139,92,246,.4), 0 0 20px rgba(139,92,246,.2);
+            letter-spacing: 1px;
+        }
+
+
+        .secao-projeto {
+            background: rgba(255,255,255,.03);
+            border: 1px solid rgba(139,92,246,.15);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 25px;
+            width: 55%;
+            transition: all .3s ease;
+        }
+            .secao-projeto:hover {
+                border-color: rgba(139,92,246,.4);
+                box-shadow: 0 0 20px rgba(139,92,246,.15);
+                transform: translateY(-3px);
+            }
+            .secao-projeto p {
+                font-size: 1.05rem;
+            }
+
+        .container-projeto p {
+            font-size: 1.1rem;
+            line-height: 2;
+            letter-spacing: 0.3px;
+            color: #d8d8d8;
+            text-align: justify;
+        }
+
+        .container-projeto h2 {
+            color: #c084fc;
+            margin-top: 40px;
+            padding-left: 15px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(139,92,246,.4);
+        }
+
+            .container-projeto h2::after {
+                content: "";
+                display: block;
+                width: 80px;
+                height: 3px;
+                margin-top: 10px;
+                border-radius: 30px;
+                background: linear-gradient( 90deg, #8b5cf6, #c084fc );
+            }
+
+        .container-projeto p {
+            font-family: "Segoe UI", sans-serif;
+            font-weight: 400;
+            text-align: justify;
+            color: #d8d8d8;
+        }
+
+        .container-projeto p {
+            font-size: 1.08rem;
+            line-height: 2.2;
+            text-align: justify;
+            color: #d8d8d8;
+            text-shadow: 0 0 1px rgba(255,255,255,.05);
+        }
+
+        .container-projeto p {
+            font-size: 1.08rem;
+            line-height: 2.2;
+            text-align: justify;
+            color: #d8d8d8;
+            text-shadow: 0 0 1px rgba(255,255,255,.05);
+        }
+
+        .secao-projeto {
+            background: linear-gradient( 135deg, rgba(139,92,246,.04), rgba(255,255,255,.01) );
+            border: 1px solid rgba(139,92,246,.25);
+        }
+
+            .secao-projeto:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 25px rgba(139,92,246,.15), 0 0 50px rgba(139,92,246,.05);
+                border-color: rgba(139,92,246,.5);
+            }
+
+        
+
+        .container-projeto ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .container-projeto li {
+            background: rgba(255,255,255,.03);
+            border: 1px solid rgba(139,92,246,.15);
+            border-radius: 15px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+        }
+
+        .container-projeto h2 {
+            position: relative;
+        }
+
+            .container-projeto h2::before {
+                content: "";
+                position: absolute;
+                left: -20px;
+                top: 50%;
+                width: 8px;
+                height: 8px;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                background: #8b5cf6;
+                box-shadow: 0 0 12px #8b5cf6;
+            }
+
+        .container-projeto {
+            background: radial-gradient( circle at top right, rgba(139,92,246,.08), transparent 25% ), radial-gradient( circle at bottom left, rgba(139,92,246,.05), transparent 25% ), #2b2b2b;
+        }
+         
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-projeto">
+
+        <h1>🖥️ Migração Windows Server 2025</h1>
+
+        <h3 class="titulo-galeria">📸 Galeria do Projeto</h3>
+
+        <div class="galeria-projeto">
+
+            <a href="img/Projetos/img1.jpeg" target="_blank">
+                <img src="img/Projetos/img1.jpeg" alt="Projeto">
+            </a>
+            <a href="img/Projetos/img2.jpeg" target="_blank">
+                <img src="img/Projetos/img2.jpeg" alt="Projeto">
+            </a>
+            <a href="img/Projetos/img3.jpeg" target="_blank">
+                <img src="img/Projetos/img3.jpeg" alt="Projeto">
+            </a>
+            <a href="img/Projetos/img4.jpeg" target="_blank">
+                <img src="img/Projetos/img4.jpeg" alt="Projeto">
+            </a>
+
+        </div>
+
+
+        <div class="status-projeto">
+            <span>✅ Concluído</span>
+            <span>🏢 Ambiente Corporativo</span>
+            <span>🖥️ Windows Server 2025</span>
+        </div>
+
+        <div class="secao-projeto">
+
+            <h2>🎯 OBJETIVO</h2>
+
+            <p>
+
+
+                O objetivo deste projeto foi modernizar a infraestrutura de servidores da organização, mantendo os ambientes atualizados por meio da adoção do Windows Server 2025.
+
+                Para viabilizar essa modernização, foi necessária a criação e configuração de novas máquinas virtuais (VMs), bem como a migração das aplicações e serviços existentes para os novos ambientes. O processo foi realizado de forma planejada, buscando preservar as configurações, funcionalidades e disponibilidade dos sistemas corporativos.
+
+                A iniciativa teve como foco proporcionar uma infraestrutura mais segura, estável, padronizada e preparada para atender às demandas atuais e futuras do negócio, além de reduzir riscos relacionados à utilização de sistemas operacionais desatualizados.
+
+                Durante a migração, foram consideradas as necessidades específicas de cada aplicação e serviço, priorizando a continuidade operacional e a redução dos impactos aos usuários e aos processos da organização.
+
+                Como resultado, o projeto proporcionou uma infraestrutura de servidores mais moderna e padronizada, contribuindo para maior segurança, disponibilidade, confiabilidade e eficiência na administração do ambiente de TI.
+            </p>
+
+        </div>
+
+        <h2>📋 ATIVIDADES REALIZADAS</h2>
+
+        <ul>
+            <li>Instalação e configuração do Windows Server 2025</li>
+            <li>Configuração e validação do Active Directory</li>
+            <li>Configuração e validação dos serviços de DNS</li>
+            <li>Configuração e validação dos serviços de DHCP</li>
+            <li>Backup das Políticas de Grupo (GPOs)</li>
+            <li>Instalação e configuração dos Serviços de Impressão</li>
+            <li>Instalação e configuração do Kaspersky Security Center</li>
+            <li>Validação do ambiente após a migração</li>
+
+
+        </ul>
+
+        <h2>🛠️ Tecnologias Utilizadas</h2>
+
+        <div class="techs">
+            <span>Windows Server</span>
+            <span>Active Directory</span>
+            <span>DNS</span>
+            <span>DHCP</span>
+            <span>GPO</span>
+            <span>PowerShell</span>
+            <span>Kaspersky Security Center</span>
+            <span>Print Services</span>
+        </div>
+
+        <h2>📈 RESULTADO</h2>
+
+
+        <p>
+            Com a atualização da plataforma, os serviços de Active Directory, DNS, DHCP,
+            Políticas de Grupo (GPOs), Serviços de Impressão e Kaspersky Security Center
+            foram disponibilizados no novo ambiente, mantendo os recursos necessários
+            para o funcionamento das aplicações e serviços corporativos.
+        </p>
+
+        <p>
+            O projeto também proporcionou uma infraestrutura atualizada e preparada para
+            futuras expansões, facilitando a administração, manutenção e evolução do
+            ambiente.
+        </p>
+
+        <a href="index.html" class="btn-voltar">
+            ← Voltar ao Portifólio
+        </a>
+
+    </div>
+
+</body>
+
+</html>

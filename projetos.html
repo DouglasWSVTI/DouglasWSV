@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Projetos</title>
+
+    <style>
+        body {
+            background: #1f1f1f;
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .container-projeto {
+            width: 95%;
+            margin: auto;
+            padding: 50px;
+            background: #2b2b2b;
+            border: 2px solid #8b5cf6;
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(139, 92, 246, .25);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(139, 92, 246, .4), 0 0 30px rgba(139, 92, 246, .2);
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #d1d5db;
+            margin-bottom: 40px;
+        }
+
+        .grid-projetos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card-projeto {
+            background: radial-gradient( circle at top left, rgba(139, 92, 246, .18), transparent 45% ), #262626;
+            border: 1px solid #8b5cf6;
+            border-radius: 20px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: .3s ease;
+            box-shadow: 0 0 15px rgba(139, 92, 246, .15);
+        }
+
+            .card-projeto:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 20px rgba(139, 92, 246, .6), 0 0 40px rgba(139, 92, 246, .2);
+            }
+
+            .card-projeto h3 {
+                color: white;
+                margin-bottom: 25px;
+                padding: 0 15px;
+            }
+
+        .mini-btn-projeto {
+            display: block;
+            width: 140px;
+            padding: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #8b5cf6;
+            border-radius: 25px;
+            background: rgba(139, 92, 246, .08);
+            font-size: .8rem;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+            .mini-btn-projeto:hover {
+                background: linear-gradient( 135deg, #8b5cf6, #a855f7 );
+                box-shadow: 0 0 15px rgba(139, 92, 246, .8);
+                transform: translateY(-2px);
+            }
+
+        .btn-voltar {
+            display: block;
+            width: 260px;
+            margin: 40px auto 0 auto;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: 2px solid #8b5cf6;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+            .btn-voltar:hover {
+                background: #8b5cf6;
+                box-shadow: 0 0 20px rgba(139, 92, 246, .8);
+                transform: translateY(-3px);
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-projeto">
+
+        <h1>💼 Todos os Projetos</h1>
+
+        <p class="subtitulo">
+            Projetos desenvolvidos em infraestrutura, monitoramento,
+            virtualização e segurança corporativa.
+        </p>
+
+        <div class="grid-projetos">
+
+            <div class="card-projeto">
+                <h3>Migração Windows Server 2025</h3>
+
+                <a href="windows-server.html" class="mini-btn-projeto">
+                    VER PROJETO
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <h3>Zabbix + Grafana</h3>
+
+                <a href="zabbix-grafana.html" class="mini-btn-projeto">
+                    VER PROJETO
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <h3>Curso De Informática</h3>
+
+                <a href="curso-informatica.html" class="mini-btn-projeto">
+                    VER PROJETO
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <h3>Monitoramento Corporativo</h3>
+
+                <a href="monitoramento-corporativo.html" class="mini-btn-projeto">
+                    VER PROJETO
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <h3>Backup e Replicação Veeam</h3>
+
+                <a href="veeam.html" class="mini-btn-projeto">
+                    VER PROJETO
+                </a>
+            </div>
+
+            <div class="card-projeto">
+                <h3>Fortigate e Segurança Perimetral</h3>
+
+                <a href="fortigate.html" class="mini-btn-projeto">
+                VER PROJETO
+                </a>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="btn-voltar">
+            ← Voltar ao Portfólio
+        </a>
+
+    </div>
+
+</body>
+
+</html>

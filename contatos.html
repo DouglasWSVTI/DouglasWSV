@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contatos | Douglas Silva</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #ffffff;
+            background: radial-gradient( circle at top right, rgba(139, 92, 246, 0.18), transparent 35% ), radial-gradient( circle at bottom left, rgba(168, 85, 247, 0.10), transparent 30% ), #171717;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* CONTAINER PRINCIPAL */
+
+        .container-contatos {
+            position: relative;
+            width: 100%;
+            max-width: 1150px;
+            padding: 50px;
+            background: radial-gradient( circle at top right, rgba(139, 92, 246, 0.10), transparent 30% ), linear-gradient( 145deg, rgba(45, 45, 45, 0.98), rgba(31, 31, 31, 0.98) );
+            border: 1px solid rgba(139, 92, 246, 0.65);
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.22), 0 0 70px rgba(139, 92, 246, 0.08);
+            overflow: hidden;
+        }
+
+
+            /* EFEITO DE FUNDO */
+
+            .container-contatos::before {
+                content: "";
+                position: absolute;
+                width: 450px;
+                height: 450px;
+                top: -220px;
+                right: -180px;
+                border-radius: 50%;
+                background: rgba(139, 92, 246, 0.10);
+                filter: blur(100px);
+                pointer-events: none;
+            }
+
+
+        /* CABEÇALHO */
+
+        .cabecalho-contatos {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+            .cabecalho-contatos h1 {
+                font-size: 3.2rem;
+                font-weight: 800;
+                letter-spacing: 1px;
+                background: linear-gradient( 90deg, #ffffff, #e9d5ff, #a855f7 );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+                .cabecalho-contatos h1::after {
+                    content: "";
+                    display: block;
+                    width: 210px;
+                    height: 4px;
+                    margin: 16px auto 0;
+                    border-radius: 20px;
+                    background: linear-gradient( 90deg, #8b5cf6, #a855f7 );
+                    box-shadow: 0 0 15px rgba(139, 92, 246, 0.65);
+                }
+
+            .cabecalho-contatos p {
+                max-width: 700px;
+                margin: 22px auto 0;
+                color: #c9c9d1;
+                font-size: 1.05rem;
+                line-height: 1.8;
+            }
+
+
+        /* GRADE DE CONTATOS */
+
+        .grid-contatos {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+
+        /* CARD */
+
+        .card-contato {
+            min-height: 210px;
+            padding: 30px;
+            text-align: center;
+            background: radial-gradient( circle at top left, rgba(139, 92, 246, 0.16), transparent 45% ), rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(139, 92, 246, 0.40);
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.10);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.35s ease;
+        }
+
+            .card-contato:hover {
+                transform: translateY(-7px);
+                border-color: #a855f7;
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.55), 0 0 40px rgba(139, 92, 246, 0.18);
+            }
+
+
+        /* ÍCONES */
+
+        .icone-contato {
+            width: 55px;
+            height: 55px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.6rem;
+            border: 1px solid rgba(139, 92, 246, 0.65);
+            border-radius: 50%;
+            background: linear-gradient( 135deg, rgba(139, 92, 246, 0.45), rgba(168, 85, 247, 0.15) );
+            box-shadow: 0 0 16px rgba(139, 92, 246, 0.25);
+            transition: all 0.35s ease;
+        }
+
+        .card-contato:hover .icone-contato {
+            transform: scale(1.12);
+            background: linear-gradient( 135deg, #8b5cf6, #a855f7 );
+            box-shadow: 0 0 22px rgba(139, 92, 246, 0.75);
+        }
+
+
+        /* TEXTOS DOS CARDS */
+
+        .card-contato h2 {
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .card-contato p {
+            margin-bottom: 20px;
+            color: #bcbcc5;
+            font-size: 0.95rem;
+        }
+
+
+        /* BOTÃO DE CADA CONTATO */
+
+        .btn-contato {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 170px;
+            padding: 10px 18px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border: 1px solid #8b5cf6;
+            border-radius: 30px;
+            background: rgba(139, 92, 246, 0.08);
+            transition: all 0.3s ease;
+        }
+
+            .btn-contato:hover {
+                color: #ffffff;
+                background: linear-gradient( 135deg, #8b5cf6, #a855f7 );
+                transform: translateY(-2px);
+                box-shadow: 0 0 15px rgba(139, 92, 246, 0.75), 0 0 30px rgba(139, 92, 246, 0.25);
+            }
+
+
+        /* BOTÃO VOLTAR */
+
+        .area-voltar {
+            position: relative;
+            z-index: 1;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 260px;
+            padding: 15px 28px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border: 2px solid #8b5cf6;
+            border-radius: 50px;
+            background: linear-gradient( 135deg, rgba(139, 92, 246, 0.25), rgba(139, 92, 246, 0.05) );
+            box-shadow: 0 0 18px rgba(139, 92, 246, 0.22);
+            transition: all 0.35s ease;
+        }
+
+            .btn-voltar:hover {
+                color: #ffffff;
+                background: linear-gradient( 135deg, #8b5cf6, #a855f7 );
+                transform: translateY(-4px);
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.85), 0 0 40px rgba(139, 92, 246, 0.35);
+            }
+
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .container-contatos {
+                padding: 30px 18px;
+                border-radius: 18px;
+            }
+
+            .cabecalho-contatos h1 {
+                font-size: 2.2rem;
+            }
+
+            .cabecalho-contatos p {
+                font-size: 0.95rem;
+            }
+
+            .grid-contatos {
+                grid-template-columns: 1fr;
+            }
+
+            .card-contato {
+                min-height: 190px;
+            }
+
+            .btn-voltar {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+
+        .cabecalho-contatos h1 {
+            color: #ffffff;
+            background: none;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: #ffffff;
+            text-shadow: 0 0 8px rgba(139, 92, 246, 0.55), 0 0 18px rgba(139, 92, 246, 0.30);
+            font-weight: 800;
+        }
+
+            .cabecalho-contatos h1::after {
+                display: none;
+            }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="container-contatos">
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho-contatos">
+
+            <h1>📬 Entre em Contato</h1>
+
+            <p>
+                Estou disponível para conexões profissionais,
+                oportunidades e conversas sobre infraestrutura,
+                suporte e tecnologia da informação.
+            </p>
+
+        </header>
+
+
+        <!-- CONTATOS -->
+
+        <section class="grid-contatos">
+
+
+            <!-- E-MAIL -->
+
+            <article class="card-contato">
+
+                <div class="icone-contato">
+                    ✉
+                </div>
+
+                <h2>E-mail</h2>
+
+                <p>
+                    Envie uma mensagem diretamente para meu e-mail.
+                </p>
+
+                douglaswsvti@hotmail.com
+
+                ENVIAR E-MAIL
+
+                </a>
+
+            </article>
+
+
+            <!-- LINKEDIN -->
+
+            <article class="card-contato">
+
+                <div class="icone-contato">
+                    in
+                </div>
+
+                <h2>LinkedIn</h2>
+
+                <p>
+                    Acompanhe minha trajetória e experiência profissional.
+                </p>
+
+                https://www.linkedin.com/
+
+                ACESSAR LINKEDIN
+
+                </a>
+
+            </article>
+
+
+            <!-- GITHUB -->
+
+            <article class="card-contato">
+
+                <div class="icone-contato">
+                    &lt;/&gt;
+                </div>
+
+                <h2>GitHub</h2>
+
+                <p>
+                    Veja meus projetos, códigos e documentações.
+                </p>
+
+                https://github.com/
+
+                ACESSAR GITHUB
+
+                </a>
+
+            </article>
+
+
+            <!-- TELEFONE -->
+
+            <article class="card-contato">
+
+                <div class="icone-contato">
+                    ☎
+                </div>
+
+                <h2>Telefone</h2>
+
+                <p>
+                    Entre em contato diretamente pelo telefone.
+                </p>
+
+                tel:+5517992312293
+
+                LIGAR AGORA
+
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- VOLTAR -->
+
+        <div class="area-voltar">
+
+            <a href="index.html" class="btn-voltar">
+                ← VOLTAR AO PORTFÓLIO
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
